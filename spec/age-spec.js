@@ -11,9 +11,15 @@ describe('Age', function() {
   it('should convert human age to Venus age', function() {
     let userAge = new Age(24);
     let venusAge = userAge.convertToVenusAge();
-
     console.log("m.age is " + venusAge);
     expect(venusAge).toEqual(38.7);
+  });
+
+  it('should convert human age to Mars age', function() {
+    let userAge = new Age(24);
+    let marsAge = userAge.convertToMarsAge();
+    console.log("m.age is " + marsAge);
+    expect(marsAge).toEqual(12.8);
   });
 
 

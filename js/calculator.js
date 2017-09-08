@@ -10,4 +10,8 @@ export class Age{
   convertToVenusAge(age) {
     return parseFloat((this.age / 0.62).toFixed(1));
   }
+
+  convertToMarsAge(age) {
+    return parseFloat((this.age / 1.88).toFixed(1));
+  }
 }

@@ -5,8 +5,7 @@ $(function() {
     event.preventDefault();
     let userAge = new Age($('#age').val());
     let mercuryAge = convertToMercuryAge();
-    alert(mercuryAge);
-      $('#mercuryAge').append("haha");
+    let marsAge = convertToMarsAge();
 
 
   });
