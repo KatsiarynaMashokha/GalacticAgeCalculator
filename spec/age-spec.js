@@ -22,6 +22,13 @@ describe('Age', function() {
     expect(marsAge).toEqual(12.8);
   });
 
+  it('should convert human age to Jupiter age', function() {
+    let userAge = new Age(24);
+    let jupiterAge = userAge.convertToJupiterAge();
+    console.log("m.age is " + jupiterAge);
+    expect(jupiterAge).toEqual(2);
+  });
+
 
 
 });

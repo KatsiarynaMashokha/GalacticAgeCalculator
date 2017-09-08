@@ -6,6 +6,7 @@ $(function() {
     let userAge = new Age($('#age').val());
     let mercuryAge = convertToMercuryAge();
     let marsAge = convertToMarsAge();
+    let jupiterAge = convertToJupiterAge();
 
 
   });

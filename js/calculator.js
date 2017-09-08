@@ -14,4 +14,8 @@ export class Age{
   convertToMarsAge(age) {
     return parseFloat((this.age / 1.88).toFixed(1));
   }
+
+  convertToJupiterAge(age) {
+    return parseFloat((this.age / 11.86).toFixed(1));
+  }
 }
