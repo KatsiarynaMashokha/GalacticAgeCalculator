@@ -4,6 +4,10 @@ export class Age{
   }
 
   convertToMercuryAge(age) {
-    return (this.age / 0.24);
+    return parseFloat((this.age / 0.24).toFixed(1));
+  }
+
+  convertToVenusAge(age) {
+    return parseFloat((this.age / 0.62).toFixed(1));
   }
 }
