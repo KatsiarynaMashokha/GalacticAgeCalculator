@@ -1,0 +1,22 @@
+{
+  "name": "galacticagecalculator",
+  "description": "Calculator-converter from human age to galactic",
+  "main": "index.js",
+  "authors": [
+    "Kate Mashokha"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/KatsiarynaMashokha/GalacticAgeCalculator",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "moment": "^2.18.1"
+  }
+}
