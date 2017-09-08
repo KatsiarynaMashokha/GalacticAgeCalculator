@@ -1,6 +1,13 @@
 import { Age } from './../js/calculator.js';
 
 describe('Age', function() {
+
+  it('should convert human age to seconds', function() {
+    let userAge = new Age(24);
+    let secondsAge = userAge.convertAgeToSeconds();
+    expect(secondsAge).toEqual(756864000);
+  });
+
   it('should convert human age to Mercury age', function() {
     let userAge = new Age(24);
     let mercuryAge = userAge.convertToMercuryAge();
