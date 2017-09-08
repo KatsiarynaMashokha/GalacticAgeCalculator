@@ -7,7 +7,6 @@ var del = require('del');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var buildProduction = utilities.env.production;
-
 var lib = require('bower-files')({
   "overrides":{
     "bootstrap" : {
@@ -22,10 +21,6 @@ var lib = require('bower-files')({
 
 var browserSync = require('browser-sync').create();
 var babelify = require('babelify');
-
-
-
-
 
 // Tasks
 
@@ -72,12 +67,6 @@ gulp.task('bowerCSS', function() {
 });
 
 gulp.task('bower', ['bowerJS', 'bowerCSS']);
-
-
-
-
-
-
 
 gulp.task('clean', function() {
   return del(['build', 'tmp']);
