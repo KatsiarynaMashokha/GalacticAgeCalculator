@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="build/js/vendor.min.js"></script>
     <title>Galactic Calculator</title>
   </head>
@@ -10,11 +11,10 @@
       <h2>Welcome to Galactic Age Calculator!</h2>
       <h4>Enter your age below to find out your Galactic age!</h4>
     <form id="age-form">
-      <label for="age">Enter your age:</label>
-      <input id="age" type="number">
+      <label for="age">Enter your birth date:</label>
+      <input id="age" type="date">
       <button class="btn-success" type="submit">Submit</button>
     </form>
-    <p id='myAge'></p>
     <ul>
       <li>Mercury age: <span id="mercuryAge"></span> years</li>
       <li>Venus age: <span id="venusAge"></span> years</li>

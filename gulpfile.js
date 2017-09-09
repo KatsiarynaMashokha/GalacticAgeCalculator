@@ -6,6 +6,7 @@ var utilities = require('gulp-util');
 var del = require('del');
 var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
+//var moment = require('moment');
 var buildProduction = utilities.env.production;
 var lib = require('bower-files')({
   "overrides":{

@@ -1,26 +1,28 @@
 export class Age{
-  constructor(age) {
+  constructor(age, currentTime) {
     this.age = age;
+    this.currentTime = currentTime;
   }
 
-  convertAgeToSeconds() {
-    return this.age * 365 * 24 * 60 * 60;
+  calculateExactHumanAgeInYears() {
+    let userBirthday = ((this.currentTime - this.age) / 31556952000).toFixed(1);
+    return parseFloat(userBirthday);
   }
-
 
   convertToMercuryAge() {
-    return parseFloat((this.age / 0.24).toFixed(1));
+    return parseFloat((this.calculateExactHumanAgeInYears() / 0.24).toFixed(1));
   }
 
   convertToVenusAge() {
-    return parseFloat((this.age / 0.62).toFixed(1));
+    return parseFloat((this.calculateExactHumanAgeInYears() / 0.62).toFixed(1));
   }
 
   convertToMarsAge() {
-    return parseFloat((this.age / 1.88).toFixed(1));
+    return parseFloat((this.calculateExactHumanAgeInYears() / 1.88).toFixed(1));
   }
 
   convertToJupiterAge() {
-    return parseFloat((this.age / 11.86).toFixed(1));
+    return parseFloat((this.calculateExactHumanAgeInYears() / 11.86).toFixed(1));
   }
+
 }

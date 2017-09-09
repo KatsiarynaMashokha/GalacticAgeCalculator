@@ -2,40 +2,36 @@ import { Age } from './../js/calculator.js';
 
 describe('Age', function() {
 
-  it('should convert human age to seconds', function() {
-    let userAge = new Age(24);
-    let secondsAge = userAge.convertAgeToSeconds();
-    expect(secondsAge).toEqual(756864000);
+  it('should calculate exact human age in years', function() {
+    let userAge = new Age(650790000000, 1504918624657);
+    let yearsAge = userAge.calculateExactHumanAgeInYears();
+    expect(yearsAge).toEqual(27.1);
   });
 
   it('should convert human age to Mercury age', function() {
-    let userAge = new Age(24);
+    let userAge = new Age(650790000000, 1504918624657);
     let mercuryAge = userAge.convertToMercuryAge();
-    console.log("m.age is " + mercuryAge);
-    expect(mercuryAge).toEqual(100.0);
+    expect(mercuryAge).toEqual(112.9);
   });
 
   it('should convert human age to Venus age', function() {
-    let userAge = new Age(24);
+    let userAge = new Age(650790000000, 1504918624657);
     let venusAge = userAge.convertToVenusAge();
-    console.log("m.age is " + venusAge);
-    expect(venusAge).toEqual(38.7);
+    expect(venusAge).toEqual(43.7);
   });
 
   it('should convert human age to Mars age', function() {
-    let userAge = new Age(24);
+    let userAge = new Age(650790000000, 1504918624657);
     let marsAge = userAge.convertToMarsAge();
-    console.log("m.age is " + marsAge);
-    expect(marsAge).toEqual(12.8);
+    expect(marsAge).toEqual(14.4);
   });
 
   it('should convert human age to Jupiter age', function() {
-    let userAge = new Age(24);
+    let userAge = new Age(650790000000, 1504918624657);
     let jupiterAge = userAge.convertToJupiterAge();
-    console.log("m.age is " + jupiterAge);
-    expect(jupiterAge).toEqual(2);
+    expect(jupiterAge).toEqual(2.3);
   });
 
-
+  
 
 });
