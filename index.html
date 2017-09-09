@@ -19,25 +19,25 @@
         </div>
         <div class="form-group">
           <label for='gender'>Select your gender:</label><br>
-          <input type="radio" name='gender' value="1" checked>Male<br>
-          <input type="radio" name='gender' value="2">Female<br>
+          <input type="radio" name='gender' value="0" checked>Male<br>
+          <input type="radio" name='gender' value="7">Female<br>
         </div>
         <div class="form-group">
           <label for='location'>Select your continent:</label>
-          <select>
-            <option value="1" checked>America</option>
-            <option value="2">Europe</option>
-            <option value="3">Asia</option>
-            <option value="4">Africa</option>
+          <select id="location">
+            <option value="6" checked>America</option>
+            <option value="6">Europe</option>
+            <option value="10">Asia</option>
+            <option value="0">Africa</option>
           </select>
         </div>
         <div class="form-group">
-          <label for='characteristics'>Check the statements you agree with:</label>
-            <input type="checkbox" name="drinking" value="1"> Do you smoke?<br>
-            <input type="checkbox" name="smoking" value="2"> Do you consume alcohol more than 3 times per week?<br>
-            <input type="checkbox" name="active" value="2"> Do you constantly exerice?<br>
-            <input type="checkbox" name="disease" value="3"> Do any of your relatives have chronic deseases?<br>
-            <input type="checkbox" name="food" value="3"> Are you trying to eat healthy?<br>
+          <label for='characteristics'>Check the statements you agree with:</label><br>
+            <input type="checkbox" name="characteristics" value="-5"> Do you smoke?<br>
+            <input type="checkbox" name="characteristics" value="-3"> Do you consume alcohol more than 3 times per week?<br>
+            <input type="checkbox" name="characteristics" value="10"> Do you constantly exerice?<br>
+            <input type="checkbox" name="characteristics" value="-2"> Do any of your relatives have chronic deseases?<br>
+            <input type="checkbox" name="characteristics" value="7"> Are you trying to eat healthy?<br>
         </div>
         <button id="submit" type="button" type='click' class="btn">Submit Age</button>
       </form>

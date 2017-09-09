@@ -5,7 +5,14 @@ $(document).ready(function() {
     event.preventDefault();
     let currentTime = new Date().getTime();
     let userBd = (new Date($('#age').val())).getTime();
-    let userAge = new Age(userBd, currentTime);
+    let genderValue = $('input[name="gender"]:checked').val();
+    let continentValue = $('#location').val();
+    let answers = [];
+    $("input:checkbox[name=characteristics]:checked").each(function(){
+      answers.push($(this).val());
+    });
+
+    let userAge = new Age(userBd, currentTime, genderValue, continentValue, answers);
 
     let mercuryAge = userAge.convertToMercuryAge();
     let venusAge = userAge.convertToVenusAge();
