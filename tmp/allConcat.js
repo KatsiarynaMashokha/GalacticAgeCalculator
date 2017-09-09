@@ -12,15 +12,11 @@ $(document).ready(function() {
     let marsAge = userAge.convertToMarsAge();
     let jupiterAge = userAge.convertToJupiterAge();
 
-
     $('.age-stats').show();
     $('#mercuryAge').text(mercuryAge);
     $('#venusAge').text(venusAge);
     $('#marsAge').text(marsAge);
     $('#jupiterAge').text(jupiterAge);
-
-
-
 
   });
 });
