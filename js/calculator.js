@@ -28,13 +28,45 @@ export class Age{
     return parseFloat((this.calculateExactHumanAgeInYears() / 11.86).toFixed(1));
   }
 
-   calculateLifeExpectancy() {
+  calculateLifeExpectancy() {
      const baseAge = 70;
      let answersSum = 0;
      for (let i = 0; i < this.answers.length; i++) {
        answersSum += this.answers[i];
      }
-     return baseAge + this.gender + this.continent + answersSum;
-   }
+     return baseAge + answersSum + this.gender + this.continent;
+  }
+
+  calculateYearsLeftOnMercury() {
+    let yearsLeft = this.calculateLifeExpectancy() - this.calculateExactHumanAgeInYears();
+    if (yearsLeft <= 0) {
+      return 'who knows how many';
+    }
+    return parseFloat((yearsLeft / 0.24).toFixed(1));
+  }
+
+  calculateYearsLeftOnVenus() {
+    let yearsLeft = this.calculateLifeExpectancy() - this.calculateExactHumanAgeInYears();
+    if (yearsLeft <= 0) {
+      return 'some';
+    }
+    return parseFloat((yearsLeft / 0.62).toFixed(1));
+  }
+
+  calculateYearsLeftOnMars() {
+    let yearsLeft = this.calculateLifeExpectancy() - this.calculateExactHumanAgeInYears();
+    if (yearsLeft <= 0) {
+      return 'who knows how many';
+    }
+    return parseFloat((yearsLeft / 1.88).toFixed(1));
+  }
+
+  calculateYearsLeftOnJupiter() {
+    let yearsLeft = this.calculateLifeExpectancy() - this.calculateExactHumanAgeInYears();
+    if (yearsLeft <= 0) {
+      return 'some';
+    }
+    return parseFloat((yearsLeft / 11.86).toFixed(1));
+  }
 
 }

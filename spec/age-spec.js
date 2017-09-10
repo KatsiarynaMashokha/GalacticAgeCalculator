@@ -9,7 +9,7 @@ describe('Age', function() {
   });
 
   it('should convert human age to Mercury age', function() {
-      let userAge = new Age(650790000000, 1504918624657, 0, 4, [3,4]);
+    let userAge = new Age(650790000000, 1504918624657, 0, 4, [3,4]);
     let mercuryAge = userAge.convertToMercuryAge();
     expect(mercuryAge).toEqual(112.9);
   });
@@ -38,8 +38,33 @@ describe('Age', function() {
     expect(approximateAge).toEqual(75);
   });
 
+  it('should calculate how many years are left to live on Mercury', function() {
+    let userAge = new Age(650790000000, 1504918624657, 0, 6, [-3,10]);
+    let mercLeft = userAge.calculateYearsLeftOnMercury();
+    expect(mercLeft).toEqual(232.9);
+  });
 
+  it('should calculate how many years are left to live on Venus', function() {
+    let userAge = new Age(650790000000, 1504918624657, 0, 6, [-3,10]);
+    let venusLeft = userAge.calculateYearsLeftOnVenus();
+    expect(venusLeft).toEqual(90.2);
+  });
 
+  it('should calculate how many years are left to live on Mars', function() {
+    let userAge = new Age(650790000000, 1504918624657, 0, 6, [-3,10]);
+    let marsLeft = userAge.calculateYearsLeftOnMars();
+    expect(marsLeft).toEqual(29.7);
+  });
 
+  it('should calculate how many years are left to live on Jupiter', function() {
+    let userAge = new Age(650790000000, 1504918624657, 0, 6, [-3,10]);
+    let jupiterLeft = userAge.calculateYearsLeftOnJupiter();
+    expect(jupiterLeft).toEqual(4.7);
+  });
 
+  it('should calculate how many years are left to live on Mercury if the current age exceed the longevity', function() {
+    let userAge = new Age(-2818275359000, 1504918624657, 0, 6, [-3,10]);
+    let mercuryLeft = userAge.calculateYearsLeftOnMercury();
+    expect(mercuryLeft).toEqual('who knows how many');
+  });
 });

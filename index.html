@@ -10,17 +10,19 @@
   </head>
   <body>
     <div class="container">
-      <h2>Welcome to Galactic Age Calculator!</h2>
-      <h4>We need to collect some information about you to give you detailed results!</h4>
+      <div class="jumbotron">
+        <h2>Welcome to Galactic Age Calculator!</h2>
+      </div>
+      <h3>We need to collect some information about you to give you detailed results.</h3>
       <form id="age-form">
         <div class="form-group">
-          <label for="age">Enter your birth date:</label>
-          <input id="age" type="date">
+          <label for="age">Select your birth date: </label>
+          <input id="age" type="date" required>
         </div>
         <div class="form-group">
           <label for='gender'>Select your gender:</label><br>
-          <input type="radio" name='gender' value="0" checked>Male<br>
-          <input type="radio" name='gender' value="7">Female<br>
+          <input type="radio" name='gender' value="0" checked> Male<br>
+          <input type="radio" name='gender' value="7"> Female<br>
         </div>
         <div class="form-group">
           <label for='location'>Select your continent:</label>
@@ -39,16 +41,16 @@
             <input type="checkbox" name="characteristics" value="-2"> Do any of your relatives have chronic deseases?<br>
             <input type="checkbox" name="characteristics" value="7"> Are you trying to eat healthy?<br>
         </div>
-        <button id="submit" type="button" type='click' class="btn">Submit Age</button>
+        <button id="submit" type="button" type='click' class="btn">Submit</button>
       </form>
       <div class="age-stats">
-      <ul>
-        <li>Mercury age: <span id="mercuryAge"></span> years</li>
-        <li>Venus age: <span id="venusAge"></span> years</li>
-        <li>Mars age: <span id="marsAge"></span> years</li>
-        <li>Jupiter age: <span id="jupiterAge"></span> years</li>
-      </ul>
-    </div>
+        <ul>
+          <li>Mercury age: <span id="mercuryAge"></span> years. You are expected to live <span id="mercuryExp"></span> more years on Mercury.</li>
+          <li>Venus age: <span id="venusAge"></span> years. You are expected to live <span id="venusExp"></span> more years on Venus.</li>
+          <li>Mars age: <span id="marsAge"></span> years. You are expected to live <span id="marsExp"></span> more years on Mars.</li>
+          <li>Jupiter age: <span id="jupiterAge"></span> years. You are expected to live <span id="jupiterExp"></span> more years on Jupiter.</li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
