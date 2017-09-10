@@ -13,8 +13,6 @@ $(document).ready(function() {
     });
 
     let userAge = new Age(userBd, currentTime, genderValue, continentValue, answers);
-    console.log(answers);
-
     let mercuryAge = userAge.convertToMercuryAge();
     let venusAge = userAge.convertToVenusAge();
     let marsAge = userAge.convertToMarsAge();
